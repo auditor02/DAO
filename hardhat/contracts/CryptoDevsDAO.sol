@@ -42,7 +42,7 @@
 
         contract CryptoDevsDAO is Ownable {
             // Create a struct named Proposal containing all relevant information
-        struct Proposal {
+          struct Proposal {
             // nftTokenId - the tokenID of the NFT to purchase from FakeNFTMarketplace if the proposal passes
             uint256 nftTokenId;
             // deadline - the UNIX timestamp until which this proposal is active. Proposal can be executed after the deadline has been exceeded.
@@ -59,11 +59,11 @@
 
         // Create a mapping of ID to Proposal
         mapping(uint256 => Proposal) public proposals;
-    // Number of proposals that have been created
-    uint256 public numProposals;
+        // Number of proposals that have been created
+        uint256 public numProposals;
 
-    IFakeNFTMarketplace nftMarketplace;
-    ICryptoDevsNFT cryptoDevsNFT;
+        IFakeNFTMarketplace nftMarketplace;
+        ICryptoDevsNFT cryptoDevsNFT;
 
     // Create a payable constructor which initializes the contract
     // instances for FakeNFTMarketplace and CryptoDevsNFT

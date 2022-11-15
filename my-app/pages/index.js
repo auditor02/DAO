@@ -95,7 +95,7 @@
       await getNumProposalsInDAO();
       setLoading(false);    
     } catch (error) {
-      console.error(error)
+      console.error(error);
       window.alert(error.data.message);
     }
   };
@@ -177,7 +177,7 @@
   // Helper function to fetch a Provider/Signer instance from MetaMask
   const getProviderOrSigner = async (needSigner = false) => {
     const provider = await Web3ModalRef.current.connect();
-    const web3Provider = new providers.web3Provider(provider);
+    const web3Provider = new providers.Web3Provider(provider);
 
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 5) {
@@ -260,7 +260,7 @@
             Loading... Waiting for transaction...
           </div>
         );
-      } else if (nftBalance === 0) {
+      } else if (nftBalance === 0.0001) {
           return (
             <div className={styles.description}>
               You do not own any CryptoDevs NFTs. <br />
